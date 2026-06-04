@@ -5,7 +5,7 @@ if ($SERVER["REQUEST_METHOD"] == "POST") {
   $price = $_POST['price'];
   $category = $_POST['category'];
   $quantity = $_POST['quantity'];
-  $sql = "INSERT INTO products(id, name, price, category, quantity)VALUES('$name', '$price', '$category', '$quantity')";
+  $sql = "INSERT INTO products(name, price, category, quantity)VALUES('$name', '$price', '$category', '$quantity')";
   $conn->query($sql);
   header("location: index.php");
   exit;

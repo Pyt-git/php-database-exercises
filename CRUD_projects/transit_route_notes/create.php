@@ -13,7 +13,7 @@
         <option value="3">48 Perras</option>
         <option value="4">REM A1 Brossard</option>
       </select>
-    
+      <button type="submit">Save</button>
     </form>
   </body>
 </html>

@@ -14,31 +14,38 @@ $result = $conn->query($sql);
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Product Catalog</title>
+    <title>Routes</title>
   </head>
   <body>
-    <h1>Product catalog</h1>
+    <h1>Routes</h1>
 
-    <a href="create.php">Add new product</a>
+    <a href="create.php">Add new route</a>
     <br>
     <br>
 
     <table border="1" cellpadding="10">
       <tr>
         <th>ID</th>
-        <th>Name</th>
-        <th>Price</th>
-        <th>Category</th>
-        <th>Quantity</th>
+        <th>Route_number</th>
+        <th>Route_name</th>
+        <th>Operator</th>
       </tr>
+    </table>
+    <table border="1" cellpadding="10">
+      <tr>
+         <th>ID</th>
+         <th>Route_id</th>
+         <th>Note_name</th>
+      </tr>
+    </table>
 
       <?php while ($row = $result->fetch_assoc()): ?>
       <tr>
-        <td><?=$row['id']?></td>
-        <td><?=$row['name']?></td>
-        <td><?=$row['price']?></td>
-        <td><?=$row['category']?></td>
-        <td><?=$row['quantity']?></td>
+        <td><?=$row['note_id']?></td>
+        <td><?=$row['note_text']?></td>
+        <td><?=$row['note_time']?></td>
+        <td><?=$row['route_number']?></td>
+        <td><?=$row['route_name']?></td>
         <td>
           <a href="edit.php?id<?=$row['id']">Edit</a> |
           <a href="delete.php?id<?=$row['id']">Delete</a>
